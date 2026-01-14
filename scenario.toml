@@ -1,6 +1,6 @@
 [green_agent]
 agentbeats_id = "019bbc85-d38c-72d1-ad34-e1c9a4106b9c"
-env = { API_KEY = "sk-7b36ab26f83443b3b7274ac3a99ac8a2", LOG_LEVEL = "INFO" }
+env = { DEEPSEEK_API_KEY = "{$DEEPSEEK_API_KEY}", LOG_LEVEL = "INFO" }
 
 [[participants]]
 agentbeats_id = ""
