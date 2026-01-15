@@ -1,0 +1,27 @@
+[
+  {
+    "name": "General User1",
+    "preferences": ["Drama", "Adventure"],
+    "description": "Prefers Drama and Adventure genres. Lenient rater. Active viewer. Broad interest type."
+  },
+  {
+    "name": "Movie Buff1",
+    "preferences": ["Action", "Thriller"],
+    "description": "Prefers Action and Thriller genres. Rational rater. Movie buff. Broad interest type."
+  },
+  {
+    "name": "New Viewer1",
+    "preferences": ["Comedy", "Drama"],
+    "description": "Prefers Comedy and Drama genres. Strict rater. New viewer. Focused preference type."
+  },
+  {
+    "name": "General User2",
+    "preferences": ["Drama", "Adventure"],
+    "description": "Prefers Drama and Adventure genres. Lenient rater. Casual viewer. Broad interest type."
+  },
+  {
+    "name": "New Viewer2",
+    "preferences": ["Drama", "Romance"],
+    "description": "Prefers Drama and Romance genres. Rational rater. New viewer. Night owl."
+  }
+]
