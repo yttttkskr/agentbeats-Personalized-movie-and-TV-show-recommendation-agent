@@ -1,16 +1,10 @@
 [green_agent]
-agentbeats_id = "019bbc85-d38c-72d1-ad34-e1c9a4106b9c"
-env = { DEEPSEEK_API_KEY = "{$DEEPSEEK_API_KEY}", LOG_LEVEL = "INFO" }
+image = "ghcr.io/yttttkskr/green.v2:latest"
+env = { DEEPSEEK_API_KEY = "${DEEPSEEK_API_KEY}" , PURPLE_AGENT_URL="http://purple_agent:9009"}
 
 [[participants]]
-agentbeats_id = ""
-name = "role_1_name"
-env = {}
-
-[[participants]]
-agentbeats_id = ""
-name = "role_2_name"
-env = {}
+image = "ghcr.io/yttttkskr/purple.v2:latest"
+name = "purple_agent"
 
 [config]
-# Add your assessment config here
+domain = "other"
