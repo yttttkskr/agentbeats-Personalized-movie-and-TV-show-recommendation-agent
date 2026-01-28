@@ -1,10 +1,13 @@
 [green_agent]
+agentbeats_id = "019bbc85-d38c-72d1-ad34-e1c9a4106b9c"
 image = "ghcr.io/yttttkskr/green.v2:latest"
 env = { DEEPSEEK_API_KEY = "${DEEPSEEK_API_KEY}" , PURPLE_AGENT_URL="http://purple_agent:9010"}
 
 [[participants]]
+agentbeats_id = "019bc310-4db5-7df0-a99a-f59e859cf9d2"
 image = "ghcr.io/yttttkskr/purple.v2:latest"
 name = "purple_agent"
+
 
 [config]
 domain = "other"
