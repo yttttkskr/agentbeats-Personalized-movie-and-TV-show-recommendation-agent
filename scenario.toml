@@ -7,8 +7,8 @@ name = "purple_agent"
 agentbeats_id = "019bc310-4db5-7df0-a99a-f59e859cf9d2"
 
 [config]
-
 domain = "other"
+
 
 
 
