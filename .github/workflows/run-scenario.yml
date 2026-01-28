@@ -28,6 +28,13 @@ jobs:
       - name: Generate docker-compose.yml
         run: python generate_compose.py --scenario scenario.toml
 
+      - name: Verify and save docker-compose.yml
+        run: |
+          echo "=== 检查生成的文件 ==="
+          
+          # 方法1：如果脚本输出到标准输出，保存到文件
+          python generate_compose.py --scenario scenario.toml > docker-compose.yml
+
       - name: Pull images
         run: |
           if ! docker compose pull; then
