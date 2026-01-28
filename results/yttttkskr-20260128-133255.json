@@ -1,0 +1,10 @@
+{
+  "participants": {
+    "purple_agent": "019bc310-4db5-7df0-a99a-f59e859cf9d2"
+  },
+  "results": [
+    {
+      "response": "Prediction completed successfully{\n  \"prediction\": [],\n  \"explanation\": \"No candidate items provided.\"\n}"
+    }
+  ]
+}
