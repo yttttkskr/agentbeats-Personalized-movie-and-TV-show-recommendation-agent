@@ -4,10 +4,10 @@ env = { DEEPSEEK_API_KEY = "${DEEPSEEK_API_KEY}" , PURPLE_AGENT_URL="http://purp
 
 [[participants]]
 agentbeats_id = "019bc310-4db5-7df0-a99a-f59e859cf9d2"
-image = "ghcr.io/yttttkskr/purple.v2:latest"
 name = "purple_agent"
 
 
 [config]
 
 domain = "other"
+
