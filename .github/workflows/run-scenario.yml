@@ -28,6 +28,12 @@ jobs:
       - name: Generate docker-compose.yml
         run: python generate_compose.py --scenario scenario.toml
 
+      - name: Validate generated YAML
+        run: |
+          echo "=== 验证生成的 docker-compose.yml ==="
+          echo "原始文件内容："
+          cat docker-compose.yml
+
       - name: Pull images
         run: |
           if ! docker compose pull; then
