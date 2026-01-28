@@ -63,9 +63,9 @@ services:
     platform: linux/amd64
     container_name: green-agent
     environment:{green_env}
-    command: ["python", "server.py", "--host", "0.0.0.0", "--port", "{green_port}", "--card-url", "http://green-agent:{green_port}"]
+    command: ["python", "server.py", "--host", "0.0.0.0", "--port", "{port}", "--card-url", "http://green-agent:{port}"]
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:{green_port}/.well-known/agent-card.json"]
+      test: ["CMD", "curl", "-f", "http://localhost:{port}/.well-known/agent-card.json"]
       interval: 5s
       timeout: 3s
       retries: 10
@@ -99,7 +99,7 @@ PARTICIPANT_TEMPLATE = """  {name}:
     environment:{env}
     command: ["python", "server.py", "--host", "0.0.0.0", "--port", "{port}", "--card-url", "http://{name}:{port}"]
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:{purple_port}/.well-known/agent-card.json"]
+      test: ["CMD", "curl", "-f", "http://localhost:{port}/.well-known/agent-card.json"]
       interval: 5s
       timeout: 3s
       retries: 10
@@ -109,7 +109,7 @@ PARTICIPANT_TEMPLATE = """  {name}:
 """
 
 A2A_SCENARIO_TEMPLATE = """[green_agent]
-endpoint = "http://green-agent:{green_port}"
+endpoint = "http://green-agent:{port}"
 
 {participants}
 {config}"""
@@ -185,7 +185,7 @@ def generate_docker_compose(scenario: dict[str, Any]) -> str:
         PARTICIPANT_TEMPLATE.format(
             name=p["name"],
             image=p["image"],
-            purple_port=DEFAULT_PORT,
+            port=DEFAULT_PORT,
             env=format_env_vars(p.get("env", {}))
         )
         for p in participants
@@ -195,8 +195,7 @@ def generate_docker_compose(scenario: dict[str, Any]) -> str:
 
     return COMPOSE_TEMPLATE.format(
         green_image=green["image"],
-        green_port=DEFAULT_PORT,
-        purple_port=DEFAULT_PORT,
+        port=DEFAULT_PORT,
         green_env=format_env_vars(green.get("env", {})),
         green_depends=format_depends_on(participant_names),
         participant_services=participant_services,
@@ -223,7 +222,7 @@ def generate_a2a_scenario(scenario: dict[str, Any]) -> str:
     config_lines = [tomli_w.dumps({"config": config_section})]
 
     return A2A_SCENARIO_TEMPLATE.format(
-        green_port=DEFAULT_PORT,
+        port=DEFAULT_PORT,
         participants="\n".join(participant_lines),
         config="\n".join(config_lines)
     )
