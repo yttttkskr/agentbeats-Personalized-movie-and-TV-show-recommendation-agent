@@ -62,7 +62,6 @@ services:
     image: {green_image}
     platform: linux/amd64
     container_name: green-agent
-    command: ["python", "server.py", "--host", "0.0.0.0", "--port", "{green_port}", "--card-url", "http://green-agent:{green_port}"]
     environment:{green_env}
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:{green_port}/.well-known/agent-card.json"]
@@ -96,7 +95,6 @@ PARTICIPANT_TEMPLATE = """  {name}:
     image: {image}
     platform: linux/amd64
     container_name: {name}
-    command: ["python", "server.py", "--host", "0.0.0.0", "--port", "{port}", "--card-url", "http://{name}:{port}"]
     environment:{env}
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:{port}/.well-known/agent-card.json"]
