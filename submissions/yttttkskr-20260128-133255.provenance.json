@@ -1,7 +1,7 @@
 {
   "image_digests": {
     "green-agent": "ghcr.io/yttttkskr/green.v1@sha256:71b659b3b5e2b2797eb60587da31eae3b6cbb6ada902e9e3cdeca31e78755790",
-    "purple_agent": "ghcr.io/yttttkskr/purple.v1@sha256:c2c13e3752ffc4d4d130da9110bab288eb80ac72ea751c6fbf9f4088d66b2731",
+    "agent": "ghcr.io/yttttkskr/purple.v1@sha256:c2c13e3752ffc4d4d130da9110bab288eb80ac72ea751c6fbf9f4088d66b2731",
     "agentbeats-client": "ghcr.io/agentbeats/agentbeats-client@sha256:13dfe3ef4e583a80e7ce2fe3becd0ce3b879841368a7f4fa40b6ebbabeeb014e"
   },
   "timestamp": "2026-01-28T13:32:55Z",
