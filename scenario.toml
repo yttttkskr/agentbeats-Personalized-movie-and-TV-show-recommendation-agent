@@ -1,6 +1,6 @@
 [green_agent]
 image = "ghcr.io/yttttkskr/green.v2:latest"
-env = { DEEPSEEK_API_KEY = "${DEEPSEEK_API_KEY}" , PURPLE_AGENT_URL="http://purple_agent:9009"}
+env = { DEEPSEEK_API_KEY = "${DEEPSEEK_API_KEY}" , PURPLE_AGENT_URL="http://purple_agent:9010"}
 
 [[participants]]
 image = "ghcr.io/yttttkskr/purple.v2:latest"
