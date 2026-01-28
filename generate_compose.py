@@ -53,7 +53,6 @@ A2A_SCENARIO_PATH = "a2a-scenario.toml"
 ENV_PATH = ".env.example"
 
 DEFAULT_PORT = 9009
-DEFAULT_PPORT = 9010
 DEFAULT_ENV_VARS = {"PYTHONUNBUFFERED": "1"}
 
 COMPOSE_TEMPLATE = """# Auto-generated from scenario.toml
@@ -64,6 +63,8 @@ services:
     platform: linux/amd64
     container_name: green-agent
     environment:{green_env}
+    entrypoint: ["python", "server.py"]
+    command: ["--host", "0.0.0.0", "--port", "{green_port}", "--card-url", "http://green-agent:{green_port}"]
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:{green_port}/.well-known/agent-card.json"]
       interval: 5s
@@ -97,6 +98,8 @@ PARTICIPANT_TEMPLATE = """  {name}:
     platform: linux/amd64
     container_name: {name}
     environment:{env}
+    entrypoint: ["python", "server.py"]
+    command: ["--host", "0.0.0.0", "--port", "{port}", "--card-url", "http://{name}:{port}"]
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:{purple_port}/.well-known/agent-card.json"]
       interval: 5s
@@ -184,7 +187,7 @@ def generate_docker_compose(scenario: dict[str, Any]) -> str:
         PARTICIPANT_TEMPLATE.format(
             name=p["name"],
             image=p["image"],
-            purple_port=DEFAULT_PPORT,
+            purple_port=DEFAULT_PORT,
             env=format_env_vars(p.get("env", {}))
         )
         for p in participants
@@ -195,7 +198,7 @@ def generate_docker_compose(scenario: dict[str, Any]) -> str:
     return COMPOSE_TEMPLATE.format(
         green_image=green["image"],
         green_port=DEFAULT_PORT,
-        purple_port=DEFAULT_PPORT,
+        purple_port=DEFAULT_PORT,
         green_env=format_env_vars(green.get("env", {})),
         green_depends=format_depends_on(participant_names),
         participant_services=participant_services,
@@ -212,7 +215,7 @@ def generate_a2a_scenario(scenario: dict[str, Any]) -> str:
         lines = [
             f"[[participants]]",
             f"role = \"{p['name']}\"",
-            f"endpoint = \"http://{p['name']}:{DEFAULT_PPORT}\"",
+            f"endpoint = \"http://{p['name']}:{DEFAULT_PORT}\"",
         ]
         if "agentbeats_id" in p:
             lines.append(f"agentbeats_id = \"{p['agentbeats_id']}\"")
