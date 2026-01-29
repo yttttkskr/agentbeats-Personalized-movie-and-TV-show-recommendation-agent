@@ -1,0 +1,82 @@
+{
+  "participants": {
+    "purple_agent": "019bc310-4db5-7df0-a99a-f59e859cf9d2"
+  },
+  "results": [
+    {
+      "persona": "General User1",
+      "persona_score": 0.6993,
+      "tasks": [
+        {
+          "task_id": "task-1",
+          "instruction": "Given the user's preference for Drama and Adventure genres, and their lenient rating style, recommend 5 movies that blend dramatic storytelling with adventurous elements, suitable for an active viewer with broad interests.",
+          "output": {
+            "prediction": [
+              "The Revenant",
+              "Life of Pi",
+              "Into the Wild",
+              "The Secret Life of Walter Mitty",
+              "The Martian"
+            ],
+            "explanation": "Returned top-5 candidate items."
+          },
+          "structural": {
+            "score": 0.8108,
+            "role": "diagnostic_only",
+            "note": "Heuristic reference metric, not used for scoring"
+          },
+          "semantic": 0.8,
+          "consistency": 0.5,
+          "explainability": 0.8,
+          "final_score": 0.74
+        },
+        {
+          "task_id": "task-2",
+          "instruction": "Based on the user's active viewing habits and broad interest in Drama and Adventure, suggest 5 movies that offer intense emotional narratives combined with thrilling adventures, considering their lenient rating tendency.",
+          "output": {
+            "prediction": [
+              "Inception",
+              "The Dark Knight",
+              "Avatar",
+              "The Lord of the Rings: The Fellowship of the Ring",
+              "Braveheart"
+            ],
+            "explanation": "Returned top-5 candidate items."
+          },
+          "structural": {
+            "score": 0.7972,
+            "role": "diagnostic_only",
+            "note": "Heuristic reference metric, not used for scoring"
+          },
+          "semantic": 0.8,
+          "consistency": 0.2778,
+          "explainability": 0.8,
+          "final_score": 0.6956
+        },
+        {
+          "task_id": "task-3",
+          "instruction": "Recommend 5 movies that cater to the user's Drama and Adventure preferences, with a focus on expansive, engaging plots for an active viewer who rates leniently and has diverse interests.",
+          "output": {
+            "prediction": [
+              "The Curious Case of Benjamin Button",
+              "Slumdog Millionaire",
+              "The Hunger Games",
+              "Pirates of the Caribbean: The Curse of the Black Pearl",
+              "The Imitation Game"
+            ],
+            "explanation": "Returned top-5 candidate items."
+          },
+          "structural": {
+            "score": 0.6198,
+            "role": "diagnostic_only",
+            "note": "Heuristic reference metric, not used for scoring"
+          },
+          "semantic": 0.8,
+          "consistency": 0.1111,
+          "explainability": 0.8,
+          "final_score": 0.6622
+        }
+      ]
+    }
+  ]
+}
