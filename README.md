@@ -175,8 +175,8 @@ docker pull ghcr.io/yttttkskr/purple.v1:latest
 2. Run the Green Agent and the Purple Agent
 
 ```bash
-docker run -e DEEPSEEK_API_KEY=sk-yourkey green.v1:latest 
-docker run purple.v1:latest 
+docker run -e DEEPSEEK_API_KEY=sk-yourkey ghcr.io/yttttkskr/green.v1:latest 
+docker run ghcr.io/yttttkskr/purple.v1:latest 
 ```
 
 Both agents run without requiring any manual interaction after startup.
