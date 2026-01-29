@@ -1,0 +1,82 @@
+{
+  "participants": {
+    "purple_agent": "019bc310-4db5-7df0-a99a-f59e859cf9d2"
+  },
+  "results": [
+    {
+      "persona": "General User1",
+      "persona_score": 0.6619,
+      "tasks": [
+        {
+          "task_id": "task-1",
+          "instruction": "Given the user's preference for Drama and Adventure genres, and their lenient rating style, recommend 5 movies that blend dramatic storytelling with adventurous elements, suitable for an active viewer with broad interests.",
+          "output": {
+            "prediction": [
+              "The Revenant",
+              "Life of Pi",
+              "Into the Wild",
+              "The Secret Life of Walter Mitty",
+              "The Martian"
+            ],
+            "explanation": "Returned top-5 candidate items."
+          },
+          "structural": {
+            "score": 0.8108,
+            "role": "diagnostic_only",
+            "note": "Heuristic reference metric, not used for scoring"
+          },
+          "semantic": 0.75,
+          "consistency": 0.5,
+          "explainability": 0.8,
+          "final_score": 0.71
+        },
+        {
+          "task_id": "task-2",
+          "instruction": "Recommend 5 adventure-drama movies that feature intense personal journeys or survival themes, aligning with the user's active viewing habits and broad interest in dramatic narratives.",
+          "output": {
+            "prediction": [
+              "Apocalypto",
+              "The Last Samurai",
+              "Dances with Wolves",
+              "Braveheart",
+              "The Edge"
+            ],
+            "explanation": "Returned top-5 candidate items."
+          },
+          "structural": {
+            "score": 0.6198,
+            "role": "diagnostic_only",
+            "note": "Heuristic reference metric, not used for scoring"
+          },
+          "semantic": 0.75,
+          "consistency": 0.2778,
+          "explainability": 0.8,
+          "final_score": 0.6656
+        },
+        {
+          "task_id": "task-3",
+          "instruction": "Suggest 5 movies that combine dramatic character development with adventurous plots, considering the user's lenient rating tendency and history of epic films, to cater to their broad interest type.",
+          "output": {
+            "prediction": [
+              "Arrival",
+              "Gravity",
+              "The Shape of Water",
+              "Annihilation",
+              "Ex Machina"
+            ],
+            "explanation": "Returned top-5 candidate items."
+          },
+          "structural": {
+            "score": 0.6245,
+            "role": "diagnostic_only",
+            "note": "Heuristic reference metric, not used for scoring"
+          },
+          "semantic": 0.75,
+          "consistency": 0.0,
+          "explainability": 0.8,
+          "final_score": 0.61
+        }
+      ]
+    }
+  ]
+}
