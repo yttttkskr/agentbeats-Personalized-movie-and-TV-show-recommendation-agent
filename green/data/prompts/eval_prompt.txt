@@ -1,0 +1,19 @@
+Please evaluate the recommendation performance for the task according to the requirements.
+
+Return strictly in the following JSON format:
+
+{
+  "score": 0.75,
+  "reason": "Example explanation"
+}
+
+Task Instruction:
+{instruction}
+
+Model Output:
+{prediction}
+
+Ground Truth:
+{ground_truth}
+
+Please return **only JSON**, without any extra text or explanations.
