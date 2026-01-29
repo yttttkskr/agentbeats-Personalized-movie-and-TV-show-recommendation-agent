@@ -1,0 +1,17 @@
+{
+  "image_digests": {
+    "green-agent": "ghcr.io/yttttkskr/green.v1@sha256:a39855142a27f3d299018e6c0f1449a43b44247c235757f5b9879c7e20910f40",
+    "purple_agent": "ghcr.io/yttttkskr/purple.v1@sha256:c2c13e3752ffc4d4d130da9110bab288eb80ac72ea751c6fbf9f4088d66b2731",
+    "agentbeats-client": "ghcr.io/agentbeats/agentbeats-client@sha256:13dfe3ef4e583a80e7ce2fe3becd0ce3b879841368a7f4fa40b6ebbabeeb014e"
+  },
+  "timestamp": "2026-01-29T13:12:51Z",
+  "github_actions": {
+    "run_url": "https://github.com/yttttkskr/agentbeats-Personalized-movie-and-TV-show-recommendation-agent/actions/runs/21478976853",
+    "run_logs_url": "https://api.github.com/repos/yttttkskr/agentbeats-Personalized-movie-and-TV-show-recommendation-agent/actions/runs/21478976853/logs",
+    "ref": "refs/heads/run",
+    "sha": "5614a02526ae57d6b277806f56dd556cb2d8cc13",
+    "repository_url": "https://github.com/yttttkskr/agentbeats-Personalized-movie-and-TV-show-recommendation-agent",
+    "workflow_ref": "yttttkskr/agentbeats-Personalized-movie-and-TV-show-recommendation-agent/.github/workflows/run-scenario.yml@refs/heads/run",
+    "workflow_sha": "5614a02526ae57d6b277806f56dd556cb2d8cc13"
+  }
+}
