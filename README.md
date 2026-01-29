@@ -40,7 +40,7 @@ Each task follows a structured formatfor example:
     "instruction": "Natural language description of the task",
     "input":{
         "history": ["user history movie 1","..."],
-        "persona": {....},
+        "persona": {"...."},
         "candidate_items": ["Movie A","..."],
         "k":5
     }
