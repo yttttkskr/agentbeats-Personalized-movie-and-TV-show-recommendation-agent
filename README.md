@@ -32,6 +32,25 @@ For each user persona, the Green Agent uses a large language model (DeepSeek) to
 
 Each instruction represents a distinct recommendation task derived from the same persona, varying in phrasing, emphasis, or contextual constraints (e.g., genre focus, viewing habits, or narrative preferences). This design enables robustness testing across semantically similar but non-identical tasks.
 
+Each task follows a structured formatfor example:
+
+```json
+{
+    "task_id": "task-x",
+    "instruction": "Natural language description of the task",
+    "input":{
+        "history": ["user history movie 1","..."],
+        "persona": {....},
+        "candidate_items": ["Movie A","..."],
+        "k":5
+    }
+    "ground_truth": [
+        {"title": "Correct Movie 1"},
+        {"title": "Correct Movie 2"}
+    ]
+}
+```
+
 ### 2. Agent Interaction
 Each generated instruction is passed to the Purple Agent, which is responsible for producing movie recommendations.  
 
