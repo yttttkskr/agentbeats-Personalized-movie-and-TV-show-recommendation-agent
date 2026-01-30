@@ -139,7 +139,7 @@ This design enables transparent analysis, reproducibility, and easy extension to
 
 ## Quick Start
 
-The entire evaluation process is non-interactive and requires no manual intervention after configuration.This project supports only for **GitHub Actions–based execution**(The Green Agent needs to be initiated by agentbeats client.)
+The entire evaluation process is non-interactive and requires no manual intervention after configuration.This project supports only by **GitHub Actions–based execution**(The Green Agent needs to be initiated by agentbeats client.)
 
 1. Configure API Key
 
